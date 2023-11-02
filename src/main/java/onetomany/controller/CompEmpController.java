@@ -26,8 +26,8 @@ public class CompEmpController {
 //	companyDao.saveCompany(company);
 		
 //	Employee employee1=new Employee();
-//	employee1.setId(103);
-//	employee1.setName("Manisha");
+//	employee1.setId(1001);
+//	employee1.setName("aman");
 //	employee1.setAddress("Bangalore");
 //	
 //	EmployeeDao employeeDao=new EmployeeDao();
@@ -51,7 +51,11 @@ public class CompEmpController {
 //		employeeDao.findEmployee(101);
 	
 		CompanyDao companyDao=new CompanyDao();
-		companyDao.findCompany(1);
+//		
+        companyDao.deleteCompany(1);
+		
+//		EmployeeDao employeeDao=new EmployeeDao();
+//		employeeDao.deleteEMployeeById(101);
 		
 	}
 }

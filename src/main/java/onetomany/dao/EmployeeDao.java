@@ -68,7 +68,20 @@ public class EmployeeDao {
 		}
 	}
 	
-	
+	public void deleteEMployeeById(int id) {
+		EntityManagerFactory entityManagerFactory=Persistence.createEntityManagerFactory("vinod");
+		EntityManager  entityManager=entityManagerFactory.createEntityManager();
+		Employee dbEmployee=entityManager.find(Employee.class, id);
+		if(dbEmployee!=null) {
+			EntityTransaction entityTransaction=entityManager.getTransaction();
+			entityTransaction.begin();
+//			
+			entityManager.remove(dbEmployee);
+			entityTransaction.commit();
+		}else {
+			System.out.println("id is not present");
+		}
+	}
 	
 	
 	
